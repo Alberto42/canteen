@@ -1,1 +1,21 @@
-
+<div class="list-group" class="list">
+  <div class="container" style="">
+    <div *ngFor="let dish of dishes" class="list-group-item align-items-start row" style="display: flex">
+      <div class="col-sm-10 inline">
+        <div class="d-flex w-100 justify-content-between">
+          <div>
+              <h5 class="mb-1">{{dish.name}}</h5>
+          </div>
+          <span class="badge badge-pill badge-secondary price">{{dish.price}} $</span>
+        </div>
+        <p class="mb-1">{{dish.description}}</p>
+        <small>Waiting time:
+          <span class="badge-secondary badge-pill"> {{dish.estimatedPreparationTime}} min</span>
+        </small>
+      </div>
+      <div class="col-sm-2 inline">
+        <button type="button" class="btn btn-primary">Order</button>
+      </div>
+    </div>
+  </div>
+</div>
