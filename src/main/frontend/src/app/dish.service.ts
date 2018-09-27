@@ -11,4 +11,8 @@ export class DishService {
   getDishes() {
       return this.http.get('/api/dishes')/*.map(response => response.json())*/;
   }
+
+  getDish(id : string) {
+    return this.http.get('/api/dishes/' + id);
+  }
 }
