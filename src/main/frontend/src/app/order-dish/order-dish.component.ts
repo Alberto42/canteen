@@ -35,7 +35,7 @@ export class OrderDishComponent implements OnInit {
 
   order() {
     this.orderService.order(this.dish.id,this.seat);
-    this.router.navigate(['/menu']);
+    this.router.navigate(['/main']);
   }
 
   goBack() {

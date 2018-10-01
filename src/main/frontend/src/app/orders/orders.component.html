@@ -1,13 +1,25 @@
-Your orders:
+<h2>Your last orders</h2>
 
 <div class="list-group" class="list">
   <div class="container" style="">
     <div *ngFor="let order of orders">
       <div class="list-group-item align-items-start row" style="display: flex">
-        {{getMinutes(order.timeStamp)}} {{getDate(order.timeStamp)}}<br/>
-        {{order.dish.name}}<br/>
-        {{order.state}}<br/>
-        {{order.seat}}<br/>
+        <div class="col-sm-4">
+          <span class="badge badge-primary minutes">{{getMinutes(order.timeStamp)}}</span>
+            <small>
+              {{getDate(order.timeStamp)}}
+            </small>
+        </div>
+        <div class="col-sm-4">
+        {{order.dish.name}}
+        </div>
+        <div class="col-sm-2">
+          <span *ngIf="order.state == 'AWAITING'" class="badge badge-info">Awaiting</span>
+          <span *ngIf="order.state == 'SERVED'" class="badge badge-primary">Served</span>
+        </div>
+        <div class="col-sm-2 text-right">
+          <small>seat: <span class="badge badge-secondary badge-pill">{{order.seat}}</span></small>
+        </div>
       </div>
     </div>
   </div>
