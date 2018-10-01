@@ -1,0 +1,9 @@
+.select {
+  display: inline-block;
+  width: 70px;
+  margin-left: 10px;
+}
+.seat_label {
+  display: inline-block;
+  margin-top: 20px;
+}

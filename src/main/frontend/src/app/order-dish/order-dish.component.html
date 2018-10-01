@@ -1,6 +1,6 @@
-<button (click)="goBack()">go back</button>
+<button class="btn btn-secondary float-right" (click)="goBack()">go back</button>
 
-Check your order, and choose your seat<br/>
+<h2>Check your order, and choose your seat</h2>
 
 <app-dish *ngIf="dish != null" [dish]="dish" [orderButton]="false"></app-dish>
 
@@ -9,8 +9,8 @@ Check your order, and choose your seat<br/>
 <form (ngSubmit)="order()" #orderForm="ngForm">
 
   <div class="form-group">
-    <label for="seat">Choose your seat</label>
-    <select class="form-control" id="seat"
+    <label for="seat" class="seat_label">Choose your seat</label>
+    <select class="form-control select" id="seat"
             required
             [(ngModel)]="seat"
             name="seat">
