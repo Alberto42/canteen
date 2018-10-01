@@ -11,6 +11,7 @@ import { DishComponent } from './dish/dish.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { OrdersComponent } from './orders/orders.component';
 import { MainComponent } from './main/main.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MainComponent } from './main/main.component';
     OrderDishComponent,
     DishComponent,
     OrdersComponent,
-    MainComponent
+    MainComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
