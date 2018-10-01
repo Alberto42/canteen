@@ -1,6 +1,8 @@
+<button (click)="goBack()">go back</button>
+
 Check your order, and choose your seat<br/>
 
-<app-dish [dish]="dish" [orderButton]="false"></app-dish>
+<app-dish *ngIf="dish != null" [dish]="dish" [orderButton]="false"></app-dish>
 
 
 

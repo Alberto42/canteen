@@ -1,3 +1,4 @@
 export class Dish {
-  public name : String;
+  public name : string;
+  public id : string;
 }
