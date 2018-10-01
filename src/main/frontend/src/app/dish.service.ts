@@ -9,7 +9,7 @@ export class DishService {
   constructor(private http: HttpClient) { }
 
   getDishes() {
-      return this.http.get('/api/dishes')/*.map(response => response.json())*/;
+      return this.http.get('/api/dishes');
   }
 
   getDish(id : string) {
