@@ -14,4 +14,8 @@ export class OrderService {
       (error) => console.log(error)
     );
   }
+
+  getOrders() {
+    return this.http.get('/api/order');
+  }
 }

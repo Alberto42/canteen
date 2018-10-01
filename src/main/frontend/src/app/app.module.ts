@@ -9,13 +9,17 @@ import { OrderDishComponent } from './order-dish/order-dish.component';
 import {RouterModule} from "@angular/router";
 import { DishComponent } from './dish/dish.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { OrdersComponent } from './orders/orders.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     OrderDishComponent,
-    DishComponent
+    DishComponent,
+    OrdersComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

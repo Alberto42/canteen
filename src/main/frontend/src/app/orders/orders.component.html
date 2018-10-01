@@ -1,0 +1,14 @@
+Your orders:
+
+<div class="list-group" class="list">
+  <div class="container" style="">
+    <div *ngFor="let order of orders">
+      <div class="list-group-item align-items-start row" style="display: flex">
+        {{order.timeStamp}}<br/>
+        {{order.dish.name}}<br/>
+        {{order.state}}<br/>
+        {{order.seat}}<br/>
+      </div>
+    </div>
+  </div>
+</div>
