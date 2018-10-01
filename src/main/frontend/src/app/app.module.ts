@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { OrderDishComponent } from './order-dish/order-dish.component';
 import {RouterModule} from "@angular/router";
 import { DishComponent } from './dish/dish.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { DishComponent } from './dish/dish.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

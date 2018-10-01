@@ -1,5 +1,24 @@
-Check your order, and choose your seat
+Check your order, and choose your seat<br/>
 
-<app-dish [dish]="dish"></app-dish>
+<app-dish [dish]="dish" [orderButton]="false"></app-dish>
 
 
+
+<form (ngSubmit)="order()" #orderForm="ngForm">
+
+  <div class="form-group">
+    <label for="seat">Choose your seat</label>
+    <select class="form-control" id="seat"
+            required
+            [(ngModel)]="seat"
+            name="seat">
+
+      <option *ngFor="let seat of seats" [value]="seat">{{seat}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!orderForm.form.valid">Confirm order</button>
+
+</form>
+
+<br/>
