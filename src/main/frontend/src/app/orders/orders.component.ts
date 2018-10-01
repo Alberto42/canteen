@@ -19,4 +19,18 @@ export class OrdersComponent implements OnInit {
     )
   }
 
+  getDate(date : string) : string{
+    let regex : string = "^\\d+-\\d+-\\d+T";
+    let day_part : string = date.match(regex)[0];
+    let day : string = day_part.substring(0,day_part.length-1);
+    return day
+  }
+
+  getMinutes(date : string) : string {
+    let regex : string = "T\\d+:\\d+";
+    let minutes_part : string = date.match(regex)[0];
+    let minutes : string = minutes_part.substring(1,minutes_part.length);
+    return minutes;
+  }
+
 }
