@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {DishService} from "../dish.service";
 import {FormControl, FormGroup} from "@angular/forms";
 @Component({
@@ -14,7 +14,7 @@ export class OrderDishComponent implements OnInit {
   seats : number[] = [1,2,3,4,5,6,7,8,9,10];
 
   seat : number;
-  constructor(private dishService : DishService, private route: ActivatedRoute) { }
+  constructor(private dishService : DishService, private route: ActivatedRoute, public router: Router) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -28,6 +28,7 @@ export class OrderDishComponent implements OnInit {
 
   order() {
     console.log(this.seat);
+    this.router.navigate(['/menu']);
   }
 
 }
