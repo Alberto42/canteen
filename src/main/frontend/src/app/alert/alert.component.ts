@@ -25,5 +25,8 @@ export class AlertComponent implements OnInit {
   isSuccess(alert: Alert) : boolean {
     return alert.type == AlertType.Success;
   }
+  removeAlert(alert: Alert) {
+    this.alerts = this.alerts.filter(x => x !== alert);
+  }
 
 }
