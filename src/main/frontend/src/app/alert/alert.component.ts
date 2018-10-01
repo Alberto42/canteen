@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AlertService} from "../alert.service";
-import {Alert} from "../model/alert";
+import {Alert, AlertType} from "../model/alert";
 
 @Component({
   selector: 'app-alert',
@@ -21,6 +21,9 @@ export class AlertComponent implements OnInit {
       }
     )
 
+  }
+  isSuccess(alert: Alert) : boolean {
+    return alert.type == AlertType.Success;
   }
 
 }
