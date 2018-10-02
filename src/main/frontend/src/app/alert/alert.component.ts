@@ -12,19 +12,22 @@ export class AlertComponent implements OnInit {
 
   alerts: Alert[] = [];
 
-  constructor(private alertService : AlertService) { }
+  constructor(private alertService: AlertService) {
+  }
 
   ngOnInit() {
     this.alertService.getAlert().subscribe(
-      (alert : Alert) => {
+      (alert: Alert) => {
         this.alerts.push(alert);
       }
     )
 
   }
-  isSuccess(alert: Alert) : boolean {
+
+  isSuccess(alert: Alert): boolean {
     return alert.type == AlertType.Success;
   }
+
   removeAlert(alert: Alert) {
     this.alerts = this.alerts.filter(x => x !== alert);
   }

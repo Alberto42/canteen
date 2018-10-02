@@ -17,6 +17,7 @@ public class AddDemoDataIntoDatabase implements ApplicationRunner {
 
     @Autowired
     OrderRepository orderRepository;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         dishRepository.deleteAll();
@@ -33,6 +34,6 @@ public class AddDemoDataIntoDatabase implements ApplicationRunner {
         dishRepository.save(stuffed_potato_skins);
 
         orderRepository.deleteAll();
-        orderRepository.save(new Order(texas_onion,State.SERVED,5));
+        orderRepository.save(new Order(texas_onion, State.SERVED, 5));
     }
 }

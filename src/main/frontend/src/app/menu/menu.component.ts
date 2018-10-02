@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DishService} from "../dish.service";
 
 @Component({
@@ -8,7 +8,8 @@ import {DishService} from "../dish.service";
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private dishService : DishService) { }
+  constructor(private dishService: DishService) {
+  }
 
   dishes: any[] = []
 

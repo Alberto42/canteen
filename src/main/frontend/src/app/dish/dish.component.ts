@@ -8,9 +8,11 @@ import {Dish} from "../model/dish";
 })
 export class DishComponent implements OnInit {
 
-  @Input() dish : Dish;
-  @Input() orderButton : boolean;
-  constructor() { }
+  @Input() dish: Dish;
+  @Input() orderButton: boolean;
+
+  constructor() {
+  }
 
   ngOnInit() {
 
