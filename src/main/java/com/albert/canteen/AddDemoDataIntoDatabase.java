@@ -26,7 +26,7 @@ public class AddDemoDataIntoDatabase implements ApplicationRunner {
         dishRepository.save(texas_onion);
         Dish nachos_muchachos = new Dish("Nachos Muchachos",
                 "Tortilla chips fried with cheese, beans, bacon - all topped with Mexican salsa sauce",
-                21., 10.);
+                21., 1.);
         dishRepository.save(nachos_muchachos);
         Dish stuffed_potato_skins = new Dish("Stuffed Potato skins", "Potato skins filled with cheese bacon, chives and sour cream - that's all there is and all you need", 25., 20.
         );
